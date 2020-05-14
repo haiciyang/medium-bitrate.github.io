@@ -1,0 +1,21 @@
+"Testsets": [
+    //    
+    {
+      "Name": "Schubert",
+      "TestID": "id1",
+      "Files": {
+        "A": "audio/8kbps_prop_0_Base.wav",
+        "B": "audio/8kbps_prop_0_Prop.wav",
+        "X": "audio/8kbps_prop_0_X.wav"
+      }
+    },
+    {
+      "Name": "Schubert 2",
+      "TestID": "id2",
+      "Files": {
+        "A": "audio/8kbps_prop_3_Prop.wav",
+        "B": "audio/8kbps_prop_3_Base.wav",
+        "X": "audio/8kbps_prop_3_X.wav"
+      }
+    }
+  ]
