@@ -1217,13 +1217,13 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
   
         // create random file mapping if not yet done
         if (!this.TestState.FileMappings[TestIdx]) {
-           this.TestState.FileMappings[TestIdx] = {"X": ""};
-           var RandFileNumber = Math.random();
-           if (RandFileNumber>0.5) {
-               this.TestState.FileMappings[TestIdx].X = "A";
-            } else {
-               this.TestState.FileMappings[TestIdx].X = "B";
-            }                
+           this.TestState.FileMappings[TestIdx] = {"X": "X"};
+        //    var RandFileNumber = Math.random();
+        //    if (RandFileNumber>0.5) {
+        //        this.TestState.FileMappings[TestIdx].X = "A";
+        //     } else {
+        //        this.TestState.FileMappings[TestIdx].X = "B";
+        //     }                
         }	
             
         // add reference
@@ -1319,16 +1319,16 @@ AbxTest.prototype.formatResults = function () {
             cell.innerHTML = this.TestConfig.Testsets[i].Name + "("+this.TestConfig.Testsets[i].TestID+")";
             cell = row.insertCell(-1);
 
-
-            if (this.TestState.Ratings[i] === this.TestState.FileMappings[i].X) {
-                this.TestState.EvalResults[i] = true;
-                cell.innerHTML = "correct"; 
-                numCorrect += 1;
-            } else {
-                this.TestState.EvalResults[i] = false;
-                cell.innerHTML = "wrong"; 
-                numWrong += 1;
-            }
+            this.TestState.EvalResults[i] = this.TestState.Ratings[i]
+            // if (this.TestState.Ratings[i] === this.TestState.FileMappings[i].X) {
+            //     this.TestState.EvalResults[i] = true;
+            //     cell.innerHTML = "correct"; 
+            //     numCorrect += 1;
+            // } else {
+            //     this.TestState.EvalResults[i] = false;
+            //     cell.innerHTML = "wrong"; 
+            //     numWrong += 1;
+            // }
         }
     }
 
